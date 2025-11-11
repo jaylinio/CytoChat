@@ -57,11 +57,9 @@ DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL
 - **Example Values**: 
   - `$MODEL_PATH` (environment variable pointing to model directory)
   - `/path/to/your/model`
-  - `Qwen/Qwen2-VL-7B-Instruct` (Hugging Face model name)
 - **Description**: 
   - Can be a local path to a model directory
   - Can also be a model name from Hugging Face Hub
-  - The model must be compatible with Qwen2-VL architecture
 
 ### `--dataset`
 - **Purpose**: Specifies the name of the dataset for inference
