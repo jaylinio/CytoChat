@@ -28,7 +28,7 @@ First, download the relevant images and label files from the following link:
 Extract the files to a local directory, such as `/path/to/your/data/`.
 
 **Format the Data**:  
-Refer to the data preparation format from the third-party repository's guide:  
+Refer to the data preparation format from the third-party repository's guide:
 [Preparation Guide](https://llamafactory.readthedocs.io/en/latest/getting_started/data_preparation.html).  
 Convert the downloaded images and labels into a JSONL format. Each line in the JSONL file should be a JSON object containing a `messages` array (for user-assistant interactions) and an `images` array (listing relative paths to the images).
 
