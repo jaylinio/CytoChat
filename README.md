@@ -23,13 +23,13 @@ conda activate cytochat
 To prepare the demo data, follow these steps:
 
 **Download the Data**:  
-First, download the relevant images and label files from the following link:  
-[https://osf.io/gkh5j/overview?view_only=97e710f368bb4b2abbb8afa80c0d8ad3](https://osf.io/gkh5j/overview?view_only=97e710f368bb4b2abbb8afa80c0d8ad3).  
+First, download the relevant images and label files from the following link:
+[Benchmark Data](https://osf.io/gkh5j/overview?view_only=97e710f368bb4b2abbb8afa80c0d8ad3).  
 Extract the files to a local directory, such as `/path/to/your/data/`.
 
 **Format the Data**:  
 Refer to the data preparation format from the third-party repository's guide:  
-[https://llamafactory.readthedocs.io/en/latest/getting_started/data_preparation.html](https://llamafactory.readthedocs.io/en/latest/getting_started/data_preparation.html).  
+[Preparation Guide](https://llamafactory.readthedocs.io/en/latest/getting_started/data_preparation.html).  
 Convert the downloaded images and labels into a JSONL format. Each line in the JSONL file should be a JSON object containing a `messages` array (for user-assistant interactions) and an `images` array (listing relative paths to the images).
 
 **Data Format Example**:  
@@ -47,6 +47,7 @@ Before proceeding with the data preparation, please download the required model 
 ## Usage
 ```bash
 cd CytoChat/libs/LLaMA-Factory
+
 DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL_PATH --dataset $DATASET_NAME --template qwen2_vl --save_name $OUTPUT_FILE
 ```
 
