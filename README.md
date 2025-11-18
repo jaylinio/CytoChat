@@ -24,7 +24,8 @@ To prepare the demo data, follow these steps:
 
 **Download the Data**:  
 First, download the relevant images and label files from the following link:
-[Benchmark Data](https://osf.io/gkh5j/overview?view_only=97e710f368bb4b2abbb8afa80c0d8ad3).  
+<!-- [Benchmark Data](https://osf.io/gkh5j/overview?view_only=97e710f368bb4b2abbb8afa80c0d8ad3).   -->
+[Benchmark Data](https://osf.io/).  
 Extract the files to a local directory, such as `/path/to/your/data/`.
 
 **Format the Data**:  
@@ -51,7 +52,7 @@ cd CytoChat/libs/LLaMA-Factory
 DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL_PATH --dataset $DATASET_NAME --template qwen2_vl --save_name $OUTPUT_FILE
 ```
 
-### `--model_name_or_path`
+#### `--model_name_or_path`
 - **Purpose**: Specifies the path or name of the model to load
 - **Format**: String
 - **Example Values**: 
@@ -61,7 +62,7 @@ DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL
   - Can be a local path to a model directory
   - Can also be a model name from Hugging Face Hub
 
-### `--dataset`
+#### `--dataset`
 - **Purpose**: Specifies the name of the dataset for inference
 - **Format**: String
 - **Example Values**: 
@@ -73,7 +74,7 @@ DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL
   - The dataset should contain images and corresponding text instructions
   - Supports custom datasets
 
-### `--template`
+#### `--template`
 - **Purpose**: Specifies the conversation template for the model
 - **Format**: String
 - **Example Value**: `qwen2_vl`
@@ -82,7 +83,7 @@ DISABLE_VERSION_CHECK=1 python scripts/vllm_infer.py --model_name_or_path $MODEL
   - The template formats input conversations and adds appropriate special tokens
   - Ensures correct model input format, especially for image token processing
 
-### `--save_name`
+#### `--save_name`
 - **Purpose**: Specifies the filename for saving inference results
 - **Format**: String
 - **Example Values**: 
